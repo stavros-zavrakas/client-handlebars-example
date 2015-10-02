@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Handlebars Partials Example</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/foundation/css/foundation.css">
+  </head>
+
+  <body>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Handlebars Partials Example!</h1>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <div id="people-list">
+        </div>
+      </div>
+    </div>
+    
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/handlebars/handlebars.js"></script>
+    <script src="js/page1.js"></script>
+    
+    <!-- People template -->
+    <script id="people-template" type="text/x-handlebars-template">
+      {{#each people}}
+        {{> person}}
+      {{/each}}
+    </script>
+    
+    <!-- Person partial -->
+    <script id="person-partial" type="text/x-handlebars-template">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="person">
+            <h2><a href="page2.html">{{firstName}} {{lastName}}</a></h2>
+            <div class="phone">{{phone}}</div>
+            <div class="email"><a href="mailto:{{email}}">{{email}}</a></div>
+            <div class="since">User since {{memberSince}}</div>
+          </div>
+        </div>
+      </div>
+    </script>
+
+  </body>
+
+</html>

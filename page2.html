@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Handlebars Partials Example</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/foundation/css/foundation.css">
+  </head>
+
+  <body>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Personal Details</h1>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <a href="page1.html"> &lt; Back</a>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="content-placeholder"></div>
+      </div>
+    </div>
+    
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/handlebars/handlebars.js"></script>
+    <script src="js/page2.js"></script>
+    
+    <!-- Address template -->
+    <script id="address-template" type="text/x-handlebars-template">
+      <p>You can find me in {{city}}. My address is {{number}} {{street}}.</p>
+    </script>
+
+  </body>
+
+</html>
